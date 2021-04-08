@@ -10,6 +10,7 @@ const Wrapper = styled.div`
     height: 100vh;
     background-color: white;
     color: #324d67;
+    overflow: hidden;
 `;
 
 const Title = styled.h1`

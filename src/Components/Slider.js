@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FaQuoteRight, FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
@@ -85,6 +85,11 @@ function Slider({ data }) {
         const length = 0;
         index === length ? setIndex(data.length - 1) : setIndex(index - 1);
     };
+
+    useEffect(() => {
+        const setSlider = setInterval(slideRight, 3000);
+        return () => clearInterval(setSlider);
+    }, [index]);
 
     return (
         <>
